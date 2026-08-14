@@ -1,0 +1,65 @@
+@import url('./fonts.css');
+
+.main__now-weather__block-icon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 300px;
+    /* height: auto; */
+}
+
+.main__now-weather-icon {
+    width: 100%;
+    min-width: 100px;
+}
+
+.main__now-weather__block-info {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.466);
+
+    height: 90%;
+    width: 280px;
+    padding: 0 10px;
+    border-radius: 9px;
+
+    .city {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .temperature {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        font-size: clamp(4rem, 10vw, 6rem);
+    }
+
+    .date {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    .condition,
+    .feeling,
+    .humidity,
+    .speed-direct {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: clamp(1rem, 3vw, 1.4rem);
+    }
+}
+
+@media (max-width: 700px) {
+    .main__now-weather__block-info {
+        width: fit-content;
+    }
+}

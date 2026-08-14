@@ -1,0 +1,164 @@
+@import url('./fonts.css');
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    z-index: 99;
+    box-shadow: 0 0 10px 2px rgba(245, 245, 245, 0.521);
+}
+
+.header__logo {
+    height: 100%;
+}
+
+.header__logo-img {
+    width: min(100%, 200px);
+
+}
+
+
+
+.header__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 35px;
+    width: min(90%, 400px);
+    padding-left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: relative;
+}
+
+.header__search-input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.06rem;
+    height: 100%;
+    width: min(100%, 300px);
+    outline: none;
+    border: none;
+}
+
+.header__search-button {
+    background-image: url('assets/search.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+.header__search-city-list-ul {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 101%;
+    width: 95%;
+    height: fit-content;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 0 0 9px 9px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header__search-city-list-li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 10px 5px;
+}
+
+.header__search-city-list-li:hover {
+    background-color: rgb(187, 187, 187);
+}
+
+.main {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 50px;
+}
+
+.main__now-weather {
+    box-shadow: 0 0 10px 2px rgba(245, 245, 245, 0.521);
+    width: min(100%, 700px);
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+
+    .main__now-weather {
+        height: auto;
+    }
+}
+
+.main__next-time-weather,
+.main__next-day-weather {
+    box-shadow: 0 0 10px 2px rgba(245, 245, 245, 0.521);
+    width: min(100%, 900px);
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 255, 255) rgba(255, 255, 255, 0);
+    padding: 10px;
+    gap: 5px;
+}
+
+.main__next-time-weather {
+    min-height: 150px;
+}
+
+.main__next-day-weather {
+    min-height: 300px;
+}
+
+.name-block {
+    width: min(100%, 900px);
+    font-size: clamp(0.8rem, 4vw, 1.8rem);
+    color: white;
+}
