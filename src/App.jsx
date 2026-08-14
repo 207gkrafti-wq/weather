@@ -239,7 +239,6 @@ function App() {
           onClick={() => {
             setLocal({ lat: elem.coords.lat, lon: elem.coords.lon, name: elem.name })
             setValue(elem.name)
-            setCity()
           }}
         >
           {elem.name}
