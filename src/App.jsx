@@ -250,7 +250,7 @@ function App() {
     <>
       <header className="header">
         <div className="header__logo">
-          <img src={`assets/logo.svg`} alt="logo" className="header__logo-img" />
+          <img src='assets/logo.svg' alt="logo" className="header__logo-img" />
         </div>
         <div className="header__search">
           <input
