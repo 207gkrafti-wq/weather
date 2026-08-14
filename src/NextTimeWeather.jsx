@@ -8,7 +8,7 @@ function NextTimeWeather({ weather }) {
     const result = weather.map((elem, index) => {
         return (<div className="main__next-time-weather__block" key={index}>
             <section className="main__next-time-weather__block-icon">
-                <img src={elem.icon} alt="" className="main__next-time-weather-icon" />
+                <img src={`${import.meta.env.BASE_URL}assets/${elem.icon}`} alt="" className="main__next-time-weather-icon" />
             </section>
             <section className="main__next-time-weather__block-info">
                 <p className="temperature">{elem.temp}</p>

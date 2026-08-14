@@ -9,11 +9,11 @@ function NextDayWeather({ weather }) {
                 <p className="day-date">{day.date}</p>
             </section>
             <section className="main__next-day-weather__block-day-info">
-                <img src={day.dayIcon} alt={day.dayCondition} title={`Днем: ${day.dayCondition}`} />
+                <img src={`${import.meta.env.BASE_URL}assets/${day.dayIcon}`} alt={day.dayCondition} title={`Днем: ${day.dayCondition}`} />
                 <span className="max-temp">{day.maxTemp}</span>
             </section>
             <section className="main__next-day-weather__block-night-info">
-                <img src={day.nightIcon} alt={day.nightCondition} title={`Ночью: ${day.nightCondition}`} />
+                <img src={`${import.meta.env.BASE_URL}assets/${day.nightIcon}`} alt={day.nightCondition} title={`Ночью: ${day.nightCondition}`} />
                 <span className="min-temp">{day.minTemp}</span>
             </section>
         </div>)
