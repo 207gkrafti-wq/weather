@@ -7,7 +7,7 @@ function NowWeather({ weather }) {
     }
     return (<>
             <section className="main__now-weather__block-icon">
-                <img src={`/assets/${weather.icon}`} alt="" className="main__now-weather-icon" />
+                <img src={`${import.meta.env.BASE_URL}assets/${weather.icon}`} alt="" className="main__now-weather-icon" />
             </section>
             <section className="main__now-weather__block-info">
                 <p className="city">{weather.city}</p>

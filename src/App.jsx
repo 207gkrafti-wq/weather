@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     async function parseCity() {
-      const respons = await fetch(`/russian-cities.json`)
+      const respons = await fetch(`${import.meta.env.BASE_URL}/russian-cities.json`)
       const data = await respons.json()
       setDataCity(data);
     }
@@ -250,7 +250,7 @@ function App() {
     <>
       <header className="header">
         <div className="header__logo">
-          <img src='/logo.svg' alt="logo" className="header__logo-img" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="logo" className="header__logo-img" />
         </div>
         <div className="header__search">
           <input
